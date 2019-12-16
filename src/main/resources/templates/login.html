@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="../static/css/login.css" th:href="@{/css/login.css}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <script type="text/javascript" th:src="@{/login.js}"></script>
+</head>
+<body>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form" th:action="@{/registration}" method="POST">
+            <input type="text" placeholder="name" th:name="username" th:value="roman"/>
+            <input type="password" placeholder="password" th:name="password" th:value="pankiv"/>
+            <input type="number" placeholder="phone number" th:name="number" th:value="0639033702"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form">
+            <input type="text" placeholder="username"/>
+            <input type="password" placeholder="password"/>
+            <button>login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+</div>
+
+<!--<form th:action="@{/registration}" method="POST">
+    <p>Login</p>
+    <input th:name="login" th:value="login" type="text">
+    <p>Password</p>
+    <input th:name="password" th:value="password" type="text">
+    <input type="submit">
+</form>
+
+<h2>Login page!</h2>
+<form th:action="@{/login}" method="POST">
+    <p>Username</p>
+    <input th:name="username" th:value="javainuse" type="text">
+    <p>Password</p>
+    <input th:name="password" th:value="javainuse" type="text">
+    <input type="submit">
+</form>-->
+</body>
+</html>
